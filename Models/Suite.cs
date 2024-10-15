@@ -4,15 +4,31 @@ namespace DesafioProjetoHospedagem.Models
     {
         public Suite() { }
 
-        public Suite(string tipoSuite, int capacidade, decimal valorDiaria)
+        public Suite(string roomType, int capacity, decimal dailyValue)
         {
-            TipoSuite = tipoSuite;
-            Capacidade = capacidade;
-            ValorDiaria = valorDiaria;
+            RoomType = roomType;
+            Capacity = capacity;
+            DailyValue = dailyValue;
         }
 
-        public string TipoSuite { get; set; }
-        public int Capacidade { get; set; }
-        public decimal ValorDiaria { get; set; }
+        private String _roomtype;
+        public String RoomType
+        {
+            get { return _roomtype; }
+            set { _roomtype = value; }
+        }
+        private int _capacity;
+        public int Capacity
+        {
+            get { return _capacity; }
+            set { _capacity = value; }
+        }
+        
+        private Decimal _dailyvalue;
+        public Decimal DailyValue
+        {
+            get { return _dailyvalue; }
+            set { _dailyvalue = value; }
+        }
     }
 }
